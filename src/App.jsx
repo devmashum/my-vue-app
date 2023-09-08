@@ -3,9 +3,20 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Todo from './todo'
+import Actor from './actor'
+import Singer from './Singer'
 
 function App() {
   const [count, setCount] = useState(0)
+
+  const actors = ['Sakib', 'Shoriful', 'Jasim', 'Riaz', 'Salman'];
+
+  const singers = [
+    { name: 'Dr. Mahfuzur Rahman', age: 68 },
+    { name: 'Eva Rahman', age: 38 },
+    { name: 'Shuvro Dev', age: 58 },
+    { name: 'Pritom', age: 28 },
+  ]
 
   return (
     <>
@@ -17,15 +28,23 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
+      {
+        singers.map(singer => <Singer singer={singer}></Singer>)
+      }
+
       <h1>Vite + React</h1>
-      <Todo task='Learn React'
+      <Actor name='Bappa Raz'></Actor>
+      {
+        actors.map(actor => <Actor name={actor}></Actor>)
+      }
+      {/* <Todo task='Learn React'
         isDone={true}></Todo>
       <Todo
         task='Explore core concept'
         isDone={false}></Todo>
       <Todo
         task='Try JSX'
-        isDone={true}></Todo>
+        isDone={true}></Todo> */}
 
       {/* <Device name='Laptop' price='55'></Device>
       <Device name='Mobile' price='30000'></Device>
