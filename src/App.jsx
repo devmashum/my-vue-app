@@ -17,19 +17,59 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Person></Person>
+      <Student></Student>
+      <Developer></Developer>
     </>
   )
+
+  function Person() {
+
+    const age = 32;
+    const person = {
+      name: 'Sakib', age: 32
+    }
+    return <h3>I am {person.name}. I am {person.age} years old</h3>
+
+  }
+  function Student() {
+    return (
+      <div className='student'>
+        <h3>This is a student</h3>
+        <p>Name:</p>
+        <p>age;</p>
+      </div>
+    )
+  }
+  function Developer() {
+    return (
+      <div>
+        <h5>Devoloper </h5>
+        <p>coading</p>
+      </div>
+    )
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 export default App
